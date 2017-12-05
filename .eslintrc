@@ -1,0 +1,78 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": [
+    "react-native",
+    "jsx-a11y",
+    "import",
+    "jsx-control-statements"
+  ],
+  "extends": [
+    "airbnb",
+    "plugin:react-native/all",
+    "plugin:jsx-control-statements/recommended"
+  ],
+  "rules": {
+    "react/no-typos": "off",
+    "object-curly-newline": "off",
+    "no-confusing-arrow": "off",
+    "global-require": "off",
+    "no-console": "off",
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "import/no-named-as-default": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "comma-dangle": ["error", "never"],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/jsx-no-undef": [2, { "allowGlobals": true }],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": false,
+        "overrides": {
+          "import": {
+            "after": true
+          },
+          "from": {
+            "after": true
+          },
+          "export": {
+            "after": true
+          },
+          "const": {
+            "after": true
+          },
+          "let": {
+            "after": true
+          },
+          "else": {
+            "after": true
+          },
+          "return": {
+            "after": true
+          },
+          "try": {
+            "after": true
+          },
+          "finally": {
+            "after": true
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "globals": {
+    "__DEV__": true
+  }
+}
